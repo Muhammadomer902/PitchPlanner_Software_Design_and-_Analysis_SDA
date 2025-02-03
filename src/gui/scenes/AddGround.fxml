@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.controllers.AddGroundController"
+            style="-fx-background-image: url('/gui/assets/bg4.jpg');
+                   -fx-background-size: cover;
+                   -fx-background-position: center;
+                   -fx-padding: 20px;">
+
+    <!-- Top Section -->
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Pitch Planner"
+                   style="-fx-font-size: 30px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" />
+            <Label text="Add Ground"
+                   style="-fx-font-size: 24px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" />
+        </VBox>
+    </top>
+
+    <!-- Center Section -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20px;">
+            <!-- Name Input -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="Ground Name:" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+                <TextField fx:id="nameField" promptText="Enter ground name"
+                           style="-fx-pref-width: 300px;" />
+            </VBox>
+
+            <!-- Location Input -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="Location:" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+                <TextField fx:id="locationField" promptText="Enter ground location"
+                           style="-fx-pref-width: 300px;" />
+            </VBox>
+
+            <!-- Price Input -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="Price (per hour):" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+                <TextField fx:id="priceField" promptText="Enter price"
+                           style="-fx-pref-width: 300px;" />
+            </VBox>
+
+            <!-- Type Selection -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="Ground Type:" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+                <ComboBox fx:id="typeComboBox" promptText="Select type"
+                          style="-fx-pref-width: 300px;" />
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+            <Button fx:id="addGroundButton" text="Add Ground"
+                    style="-fx-background-color: #32CD32; -fx-text-fill: white;
+                           -fx-font-size: 14px; -fx-padding: 10px;
+                           -fx-border-radius: 5px; -fx-background-radius: 5px;" 
+                    onAction="#handleAddGround" />
+            <Button fx:id="backButton" text="Back"
+                    style="-fx-background-color: #FF6347; -fx-text-fill: white;
+                           -fx-font-size: 14px; -fx-padding: 10px;
+                           -fx-border-radius: 5px; -fx-background-radius: 5px;" 
+                    onAction="#handleBack" />
+        </VBox>
+    </bottom>
+</BorderPane>

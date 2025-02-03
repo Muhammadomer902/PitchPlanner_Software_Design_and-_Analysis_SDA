@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="gui.controllers.HandleComplaintsController" 
+            style="-fx-background-image: url('/gui/assets/bg5.jpg'); 
+                   -fx-background-size: cover; 
+                   -fx-background-position: center; 
+                   -fx-padding: 20px;">
+
+    <!-- Top Section -->
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <!-- Main Heading -->
+            <Label style="-fx-font-size: 30px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" 
+                   text="Handle Complaints" />
+        </VBox>
+    </top>
+
+    <!-- Center Section -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20px;">
+            <!-- Complaints Table -->
+            <TableView fx:id="complaintsTable" 
+                       style="-fx-background-color: rgba(255, 255, 255, 0.8); 
+                              -fx-border-radius: 10px; -fx-background-radius: 10px;" 
+                       prefWidth="800" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="Complainant Name" prefWidth="150" />
+                    <TableColumn fx:id="roleColumn" text="Role" prefWidth="100" />
+                    <TableColumn fx:id="issueColumn" text="Issue" prefWidth="300" />
+                    <TableColumn fx:id="groundColumn" text="Ground Name" prefWidth="150" />
+                    <TableColumn fx:id="actionColumn" text="Action" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+            <Button fx:id="backButton" text="Back" 
+                    style="-fx-background-color: #FF6347; -fx-text-fill: white; 
+                           -fx-font-size: 14px; -fx-padding: 10px; 
+                           -fx-border-radius: 5px; -fx-background-radius: 5px;" 
+                    onAction="#handleBack" />
+        </VBox>
+    </bottom>
+</BorderPane>

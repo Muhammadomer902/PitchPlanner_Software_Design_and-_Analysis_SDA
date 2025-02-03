@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="30" style="-fx-background-image: url('gui/assets/WelcomeBackground.jpg');               -fx-background-size: cover;               -fx-background-position: center;               -fx-background-repeat: no-repeat;               -fx-min-height: 100vh;               -fx-min-width: 100vw;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.WelcomePageController">
+
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="10">
+        <Label style="-fx-font-size: 30px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" text="Welcome to Pitch Planner" />
+    </HBox>
+
+    <!-- Buttons Section -->
+    <VBox alignment="CENTER" spacing="20">
+        <Button fx:id="UserLogin" onAction="#handleLogin" style="-fx-background-color: linear-gradient(to bottom, #007BFF, #0056B3);                         -fx-text-fill: white;                         -fx-font-size: 18px;                         -fx-pref-width: 200px;                         -fx-padding: 10px;                         -fx-border-radius: 10px;                         -fx-background-radius: 10px;" text="User Login" />
+        <Button fx:id="UserRegisteration" onAction="#handleRegister" style="-fx-background-color: linear-gradient(to bottom, #32CD32, #228B22);                         -fx-text-fill: white;                         -fx-font-size: 18px;                         -fx-pref-width: 200px;                         -fx-padding: 10px;                         -fx-border-radius: 10px;                         -fx-background-radius: 10px;" text="User Registration" />
+        <Button fx:id="AdminLogin" onAction="#handleAdminLogin" style="-fx-background-color: linear-gradient(to bottom, #FFA500, #FF8C00);                         -fx-text-fill: white;                         -fx-font-size: 18px;                         -fx-pref-width: 200px;                         -fx-padding: 10px;                         -fx-border-radius: 10px;                         -fx-background-radius: 10px;" text="Admin Login" />
+    </VBox>
+</VBox>

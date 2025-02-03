@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-image: url('gui/assets/bg2.jpg');         -fx-background-size: cover;         -fx-background-position: center;         -fx-background-repeat: no-repeat;         -fx-min-height: 100vh;         -fx-max-height: 100vh;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.UserLoginController">   
+      
+    <!-- Title Label -->
+    <Label style="-fx-font-size: 30px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" text="Pitch Planner" />
+    
+    <Label style="-fx-font-size: 26px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white; 
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" text="User Login" />
+    
+    <!-- Username Field -->
+    <TextField fx:id="usernameField" promptText="Enter Username" style="-fx-pref-width: 100%; -fx-font-size: 14px; -fx-max-width: 300px;" />
+    
+    <!-- Password Field -->
+    <PasswordField fx:id="passwordField" promptText="Enter Password" style="-fx-pref-width: 100%; -fx-font-size: 14px; -fx-max-width: 300px;" />
+    
+    <!-- Login Button -->
+    <Button fx:id="Login" onAction="#handleLogin" style="-fx-background-color: #008CBA; -fx-text-fill: white; -fx-pref-width: 100%; -fx-max-width: 300px; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Login" />
+    
+    <!-- Sign Up Button -->
+    <Button fx:id="SignUp" onAction="#handleSignUp" style="-fx-background-color: #32CD32; -fx-text-fill: white; -fx-pref-width: 100%; -fx-max-width: 300px; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Sign Up" />
+
+    <!-- Error Message Label -->
+    <Label fx:id="messageLabel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.8, 2, 2);" text="" />
+</VBox>
